@@ -2,7 +2,11 @@ var Discord = require('discord.io');
 var logger = require('winston');
 //var auth = require('./auth.json');
 //must be this way for some reason
-//client.login(process.env.BOT_TOKEN);
+var auth = client.login(process.env.BOT_TOKEN);
+var port = process.env.PORT || 8000;
+server.listen(port, function() {
+    console.log("App is running on port " + port);
+});
 //logger
 //winston.add(winston.transports.File, { filename: '/var/log/my-test-logs.log' });
 logger.remove(logger.transports.Console);
@@ -12,7 +16,7 @@ logger.add(new logger.transports.Console, {
 logger.level = 'debug';
 //initialize
 var bot = new Discord.Client({
-  //token: auth.token,
+  token: auth.token,
   autorun: true
 });
 //messages
