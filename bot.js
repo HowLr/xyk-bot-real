@@ -1,8 +1,8 @@
 var Discord = require('discord.io');
 var logger = require('winston');
-//var auth = require('./auth.json');
+var auth = require('./auth.json');
 //must be this way for some reason
-client.login(process.env.BOT_TOKEN);
+//client.login(process.env.BOT_TOKEN);
 //logger
 winston.add(winston.transports.File, { filename: '/var/log/my-test-logs.log' });
 logger.remove(logger.transports.Console);
