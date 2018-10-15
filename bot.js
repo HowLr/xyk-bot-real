@@ -2,7 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 //var auth = require('./auth.json');
 //must be this way for some reason
-var auth = client.login(process.env.BOT_TOKEN);
+var auth = bot.login(process.env.BOT_TOKEN);
 var port = process.env.PORT || 8000;
 server.listen(port, function() {
     console.log("App is running on port " + port);
