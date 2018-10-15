@@ -1,7 +1,10 @@
 var Discord = require('discord.io');
 var logger = require('winston');
 //var auth = require('./auth.json');
+//must be this way for some reason
+client.login(process.env.BOT_TOKEN);
 //logger
+winston.add(winston.transports.File, { filename: '/var/log/my-test-logs.log' });
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
   colorize: true
@@ -12,8 +15,6 @@ var bot = new Discord.Client({
   token: auth.token,
   autorun: true
 });
-//must be this way for some reason
-client.login(process.env.BOT_TOKEN);
 //messages
 bot.on('ready', function (evt) {
   logger.info('Connected');
