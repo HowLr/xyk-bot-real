@@ -11,6 +11,6 @@
     "discord.io": "^2.5.3",
     "discord.js": "^11.4.2",
     "winston": "^2.4.3",
-    "request": "2.81.0"
+    "request": "^2.81.0"
   }
 }
